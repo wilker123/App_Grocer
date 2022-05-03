@@ -14,6 +14,7 @@ class SignInScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
+                //Nome do app
                 Text.rich(
                   TextSpan(
                     style: TextStyle(
@@ -36,6 +37,7 @@ class SignInScreen extends StatelessWidget {
                     ],
                   ),
                 ),
+                //Categorias
                 Text("Frutas"),
               ],
             ),
