@@ -68,7 +68,7 @@ class SignInScreen extends StatelessWidget {
                 ),
 // Divisor
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  padding: const EdgeInsets.only(bottom: 10),
                   child: Row(
                     children: [
                       Expanded(
@@ -95,13 +95,21 @@ class SignInScreen extends StatelessWidget {
                   height: 50,
                   child: OutlinedButton(
                     style: OutlinedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18),
+                      ),
                       side: const BorderSide(
                         width: 2,
                         color: Colors.green,
                       ),
                     ),
                     onPressed: () {},
-                    child: const Text("Criar conta"),
+                    child: const Text(
+                      "Criar conta",
+                      style: TextStyle(
+                        fontSize: 18,
+                      ),
+                    ),
                   ),
                 )
               ],
