@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({Key? key}) : super(key: key);
+  final IconData icon;
+  final String label;
+
+  const CustomTextField({
+    Key? key,
+    required this.icon,
+    required this.label,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,8 +16,8 @@ class CustomTextField extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 15),
       child: TextFormField(
         decoration: InputDecoration(
-          prefixIcon: const Icon(Icons.email),
-          labelText: "Email",
+          prefixIcon: Icon(icon),
+          labelText: label,
           isDense: true,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(18),
