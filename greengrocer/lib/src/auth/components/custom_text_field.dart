@@ -9,7 +9,7 @@ class CustomTextField extends StatelessWidget {
     Key? key,
     required this.icon,
     required this.label,
-    required this.isObscure,
+    this.isObscure = false,
   }) : super(key: key);
 
   @override
