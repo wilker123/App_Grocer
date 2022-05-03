@@ -39,14 +39,17 @@ class SignInScreen extends StatelessWidget {
                   ),
                 ),
                 //Categorias
-                AnimatedTextKit(animatedTexts: [
-                  FadeAnimatedText('Frutas'),
-                  FadeAnimatedText('Verduras'),
-                  FadeAnimatedText('Legumes'),
-                  FadeAnimatedText('Carnes'),
-                  FadeAnimatedText('Cereais'),
-                  FadeAnimatedText('Laticíos'),
-                ])
+                DefaultTextStyle(
+                  style: const TextStyle(fontSize: 25),
+                  child: AnimatedTextKit(animatedTexts: [
+                    FadeAnimatedText('Frutas'),
+                    FadeAnimatedText('Verduras'),
+                    FadeAnimatedText('Legumes'),
+                    FadeAnimatedText('Carnes'),
+                    FadeAnimatedText('Cereais'),
+                    FadeAnimatedText('Laticíos'),
+                  ]),
+                )
               ],
             ),
           ),
