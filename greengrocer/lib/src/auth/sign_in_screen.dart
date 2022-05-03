@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:greengrocer/src/auth/components/custom_text_field.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -24,16 +25,9 @@ class SignInScreen extends StatelessWidget {
                 ),
               ),
               child: Column(
-                children: [
-                  TextFormField(
-                    decoration: InputDecoration(
-                      isDense: true,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(18),
-                      ),
-                    ),
-                  ),
-                  TextFormField(),
+                children: const [
+                  CustomTextField(),
+                  CustomTextField(),
                 ],
               ),
             ),
