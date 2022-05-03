@@ -11,10 +11,36 @@ class SignInScreen extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            child: Container(
-              color: Colors.green,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text.rich(
+                  TextSpan(
+                    style: TextStyle(
+                      fontSize: 40,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: "Green",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      TextSpan(
+                        text: "grocer",
+                        style: TextStyle(
+                          color: Colors.red,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Text("Frutas"),
+              ],
             ),
           ),
+//Formulário
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 40),
             decoration: const BoxDecoration(
@@ -26,11 +52,12 @@ class SignInScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-//Campos de texto
+//Email
                 const CustomTextField(
                   icon: Icons.email,
                   label: "Email",
                 ),
+//Senha
                 const CustomTextField(
                   icon: Icons.lock,
                   label: "Senha",
@@ -54,6 +81,7 @@ class SignInScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+//Esqueceu a senha
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
