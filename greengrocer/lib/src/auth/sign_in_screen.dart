@@ -15,60 +15,61 @@ class SignInScreen extends StatelessWidget {
               color: Colors.green,
             ),
           ),
-          Expanded(
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 40),
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.vertical(
-                  top: Radius.circular(45),
-                ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 40),
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(45),
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
 //Campos de texto
-                  const CustomTextField(
-                    icon: Icons.email,
-                    label: "Email",
-                  ),
-                  const CustomTextField(
-                    icon: Icons.lock,
-                    label: "Senha",
-                    isSecret: true,
-                  ),
+                const CustomTextField(
+                  icon: Icons.email,
+                  label: "Email",
+                ),
+                const CustomTextField(
+                  icon: Icons.lock,
+                  label: "Senha",
+                  isSecret: true,
+                ),
 //Botão de entrar
-                  SizedBox(
-                    height: 50,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18),
-                        ),
+                SizedBox(
+                  height: 50,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18),
                       ),
-                      onPressed: () {},
-                      child: const Text(
-                        "Entrar",
-                        style: TextStyle(
-                          fontSize: 18,
-                        ),
+                    ),
+                    onPressed: () {},
+                    child: const Text(
+                      "Entrar",
+                      style: TextStyle(
+                        fontSize: 18,
                       ),
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: TextButton(
-                      onPressed: () {},
-                      child: const Text(
-                        "Esqueceu a senha?",
-                        style: TextStyle(
-                          color: Colors.red,
-                        ),
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "Esqueceu a senha?",
+                      style: TextStyle(
+                        color: Colors.red,
                       ),
                     ),
                   ),
+                ),
 // Divisor
-                  Row(
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: Row(
                     children: [
                       Expanded(
                         child: Divider(
@@ -88,9 +89,22 @@ class SignInScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
 //Botão de novo usuário
-                ],
-              ),
+                SizedBox(
+                  height: 50,
+                  child: OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      side: const BorderSide(
+                        width: 2,
+                        color: Colors.green,
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: const Text("Criar conta"),
+                  ),
+                )
+              ],
             ),
           ),
         ],
