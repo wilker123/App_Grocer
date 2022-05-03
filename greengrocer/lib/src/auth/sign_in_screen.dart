@@ -27,6 +27,7 @@ class SignInScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
+//Campos de texto
                   const CustomTextField(
                     icon: Icons.email,
                     label: "Email",
@@ -36,6 +37,7 @@ class SignInScreen extends StatelessWidget {
                     label: "Senha",
                     isSecret: true,
                   ),
+//Botão de entrar
                   SizedBox(
                     height: 50,
                     child: ElevatedButton(
@@ -65,6 +67,7 @@ class SignInScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+// Divisor
                   Row(
                     children: [
                       Expanded(
@@ -85,6 +88,7 @@ class SignInScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+//Botão de novo usuário
                 ],
               ),
             ),
