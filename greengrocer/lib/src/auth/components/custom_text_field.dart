@@ -20,6 +20,12 @@ class CustomTextField extends StatelessWidget {
         obscureText: isObscure,
         decoration: InputDecoration(
           prefixIcon: Icon(icon),
+          suffixIcon: isObscure
+              ? IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.visibility),
+                )
+              : null,
           labelText: label,
           isDense: true,
           border: OutlineInputBorder(
